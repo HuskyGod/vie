@@ -15,6 +15,7 @@ class Index extends Component {
                   <Link to="/about" >about</Link>
                   <Link to="/home" >home</Link>    
               </div>
+              <div>1111</div>
               <div>
                   <Route path="/user" exact={true} component={User}></Route>
                   <Route path="/about" component={About}></Route>
