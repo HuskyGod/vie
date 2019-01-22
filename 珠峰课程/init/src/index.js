@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom';
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, Redirect, Switch } from 'react-router-dom'
 import User from './page/user';
 import About from './page/about';
 import Home from './page/home';
@@ -16,9 +16,12 @@ class Index extends Component {
                   <Link to="/home" >home</Link>    
               </div>
               <div>
-                  <Route path="/user" exact={true} component={User}></Route>
-                  <Route path="/about" component={About}></Route>
-                  <Route path="/home" component={Home}></Route>
+                  <Switch>
+                        <Route path="/user" exact={true} component={User}></Route>
+                        <Route path="/about" component={About}></Route>
+                        <Route path="/home" component={Home}></Route>
+                        <Redirect to="/home"></Redirect>
+                  </Switch>
               </div>
           </div>
       </Router>
