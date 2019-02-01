@@ -7,7 +7,7 @@ export default class Link extends Component {
                 {
                     (state) => {
                         return <a onClick={() => {
-                            console.log('state2ff22', state)
+                            console.log('stat3e2ff22', state)
                             state.history.push(this.props.to)
                         }}>{this.props.children}</a>
                     }
